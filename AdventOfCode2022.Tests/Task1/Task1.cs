@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2022.Day1;
+using AdventOfCode2022.Task1;
 using FluentAssertions;
 using NUnit.Framework;
 

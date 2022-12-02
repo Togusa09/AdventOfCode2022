@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2022.Day1
+﻿namespace AdventOfCode2022.Task1
 {
     public class Task1A
     {
