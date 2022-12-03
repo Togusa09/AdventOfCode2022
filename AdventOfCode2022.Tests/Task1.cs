@@ -4,7 +4,7 @@ using FluentAssertions;
 using NUnit.Framework;
 
 
-namespace AdventOfCode2022.Tests.Task1
+namespace AdventOfCode2022.Tests
 {
     [TestFixture]
     public class Task1

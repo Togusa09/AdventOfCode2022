@@ -2,10 +2,13 @@
 
 using AdventOfCode2022.Day1;
 using AdventOfCode2022.Task2;
+using AdventOfCode2022.Task3;
 
 
 //var result = new Task1B().Solve(File.ReadLines("Data/Task1.txt"));
 //var result = new Task2A().Solve(File.ReadLines("Data/Task2.txt"));
-var result = new Task2B().Solve(File.ReadLines("Data/Task2.txt"));
+//var result = new Task2B().Solve(File.ReadLines("Data/Task2.txt"));
+//var result = new Task3A().Solve(File.ReadLines("Data/Task3.txt"));
+var result = new Task3B().Solve(File.ReadLines("Data/Task3.txt"));
 
 Console.WriteLine(result);
