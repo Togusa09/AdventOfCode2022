@@ -4,6 +4,7 @@ using AdventOfCode2022.Day1;
 using AdventOfCode2022.Task2;
 using AdventOfCode2022.Task3;
 using AdventOfCode2022.Task4;
+using AdventOfCode2022.Task5;
 
 
 //var result = new Task1B().Solve(File.ReadLines("Data/Task1.txt"));
@@ -12,6 +13,8 @@ using AdventOfCode2022.Task4;
 //var result = new Task3A().Solve(File.ReadLines("Data/Task3.txt"));
 //var result = new Task3B().Solve(File.ReadLines("Data/Task3.txt"));
 //var result = new Task4A().Solve(File.ReadLines("Data/Task4.txt"));
-var result = new Task4B().Solve(File.ReadLines("Data/Task4.txt"));
+//var result = new Task4B().Solve(File.ReadLines("Data/Task4.txt"));
+//var result = new Task5A().Solve(File.ReadLines("Data/Task5.txt"));
+var result = new Task5B().Solve(File.ReadLines("Data/Task5.txt"));
 
 Console.WriteLine(result);
