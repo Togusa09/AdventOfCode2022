@@ -12,7 +12,7 @@ namespace AdventOfCode2022.Tests
         [TestCase("nppdvjthqldpwncqszvftbrmjlhg", 6)]
         [TestCase("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 10)]
         [TestCase("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 11)]
-        public void Part5ASample(string data, int answer)
+        public void Part6ASample(string data, int answer)
         {
             var task = new Task6A();
             var result = task.Solve(data);
@@ -28,7 +28,7 @@ namespace AdventOfCode2022.Tests
         [TestCase("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 29)]
         [TestCase("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw",26)]
 
-        public void Part5BSample(string data, int answer)
+        public void Part6BSample(string data, int answer)
         {
             var task = new Task6B();
             var result = task.Solve(data);
