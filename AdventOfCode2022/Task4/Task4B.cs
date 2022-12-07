@@ -1,7 +1,7 @@
 ﻿
 namespace AdventOfCode2022.Task4
 {
-    public class Task4B
+    public class Task4B : ITask<IEnumerable<string>, int>
     {
         private record Range(int Start, int End)
         {

@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.Task2
 {
-    public class Task2A
+    public class Task2A : ITask<IEnumerable<string>, int>
     {
         enum Shape
         {

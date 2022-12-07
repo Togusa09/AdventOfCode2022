@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2022.Task6
 {
-    public class Task6B
+    public class Task6B : ITask<string, int>
     {
         public int Solve(string data)
         {

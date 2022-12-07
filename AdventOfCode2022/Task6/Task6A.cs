@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.Task6
 {
-    public class Task6A
+    public class Task6A : ITask<string, int>
     {
         public int Solve(string data)
         {

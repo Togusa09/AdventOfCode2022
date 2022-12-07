@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.Task3;
 
-public class Task3B
+public class Task3B : ITask<IEnumerable<string>, int>
 {
     public int GetPriority(char val)
     {

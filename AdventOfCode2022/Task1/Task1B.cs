@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.Day1
 {
-    public class Task1B
+    public class Task1B : ITask<IEnumerable<string>, int>
     {
         public int Solve(IEnumerable<string> data)
         {

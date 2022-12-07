@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2022.Task4
 {
-    public class Task4A
+    public class Task4A : ITask<IEnumerable<string>, int>
     {
-
-
         private record Range(int Start, int End)
         {
             public bool Contains(Range otherRange) => otherRange.Start <= Start && otherRange.End >= End;

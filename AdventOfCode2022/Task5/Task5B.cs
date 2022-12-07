@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022.Task5
 {
-    public class Task5B
+    public class Task5B : ITask<IEnumerable<string>, string>
     {
         private record Command(int Quantity, int Source, int Target);
 

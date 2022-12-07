@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2022.Task3
 {
-    public class Task3A
+    public class Task3A : ITask<IEnumerable<string>, int>
     {
         public int GetPriority(char val)
         {
