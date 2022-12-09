@@ -28,6 +28,7 @@ namespace AdventOfCode2022.Tests
             var result = task.Solve(TestData.Split('\n'));
 
             result.Should().Be(8);
+            result.Should().Be(8);
         }
     }
 }
