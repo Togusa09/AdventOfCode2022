@@ -38,23 +38,13 @@ public class Task9B : ITask<IEnumerable<string>, int>
     private Point Chase(Point headPosition, Point tailPosition)
     {
         var distance = headPosition - tailPosition;
-        if (tailPosition.X == headPosition.X && Math.Abs(distance.Y) > 1) // Same row
-        {
-            var direction = distance.Y / Math.Abs(distance.Y);
-            tailPosition += new Point(0, direction);
-        }
-        else if (tailPosition.Y == headPosition.Y && Math.Abs(distance.X) > 1) // Same column
-        {
-            var direction = distance.X / Math.Abs(distance.X);
-            tailPosition += new Point(direction, 0);
-        }
-        else if (Math.Abs(distance.X) > 1 || Math.Abs(distance.Y) > 1) // Diagonal
-        {
-            var directionX = distance.X / Math.Abs(distance.X);
-            var directionY = distance.Y / Math.Abs(distance.Y);
 
-            tailPosition += new Point(directionX, directionY);
-        }
+        if (Math.Abs(distance.X) <= 1 && Math.Abs(distance.Y) <= 1) return tailPosition;
+
+        var directionX = Math.Clamp(distance.X, -1, 1);
+        var directionY = Math.Clamp(distance.Y, -1, 1);
+
+        tailPosition += new Point(directionX, directionY);
 
         return tailPosition;
     }
@@ -69,7 +59,7 @@ public class Task9B : ITask<IEnumerable<string>, int>
         var tailHistory = new List<Point>();
 
         var body = new Point[10];
-        for (var i = 0; i < 10; i++) body[i] = new Point(0, 0);
+        for (var i = 0; i < body.Length; i++) body[i] = new Point(0, 0);
 
         foreach (var command in data)
         {
