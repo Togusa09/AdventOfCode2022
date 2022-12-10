@@ -19,7 +19,7 @@ namespace AdventOfCode2022.Console // Note: actual namespace depends on the proj
     {
         private static void RunTask(Type type)
         {
-            var fileName = "Data/" + type.Name.Substring(0, 5) + ".txt";
+            var fileName = "Data/" + type.Name.Substring(0, type.Name.Length-1) + ".txt";
 
             if (!File.Exists(fileName)) return;
 
