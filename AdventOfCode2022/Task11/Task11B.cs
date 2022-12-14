@@ -21,8 +21,6 @@ public class Task11B : ITask<IEnumerable<string>, long>
             var line3 = data[2].Replace("Operation: ", "").Trim().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
             var line4 = data[3].Replace("Test: divisible by ", "").Trim();
             var test = int.Parse(line4);
-            //var line5 = data[4].Replace("If true: throw to monkey", "").Trim();
-            //var line6 = data[5].Replace("If false: throw to monkey", "").Trim();
             var trueAction = new MonkeyAction(ActionType.Throw, int.Parse(data[4][^1..^0]));
             var falseAction = new MonkeyAction(ActionType.Throw, int.Parse(data[5][^1..^0]));
 
@@ -39,15 +37,6 @@ public class Task11B : ITask<IEnumerable<string>, long>
 
     public long Solve(IEnumerable<string> val)
     {
-        /*
-         * Monkey 0:
-            Starting items: 79, 98
-            Operation: new = old * 19
-            Test: divisible by 23
-            If true: throw to monkey 2
-            If false: throw to monkey 3
-         */
-
         var data = val.Where(x => !string.IsNullOrWhiteSpace(x))
             .Chunk(6)
             .Select(Monkey.Parse)
@@ -80,24 +69,11 @@ public class Task11B : ITask<IEnumerable<string>, long>
                             break;
                     }
 
-
                     var test = (result % monkey.Test) == 0;
 
                     var newMonkey = test ? data[monkey.TrueAction.target] : data[monkey.FalseAction.target];
 
-                    // result = test ? result / monkey.Test : result;
                     result = result % multiple;
-                    //result = result / 10000;
-                    //result = result / 9699690 + result % 9699690;
-                    //result = result / monkey.Test + result % monkey.Test;
-                    //result = result / newMonkey.Test + result % newMonkey.Test;
-
-                    //result = test ? result % monkey.Test : result;
-                    //result = result % 9699690;
-                    //result = result / 9699690;
-                    //result = result % 21;
-                    //result = result / 21;
-
 
                     newMonkey.Item.Add(result);
                     monkey.Item.Remove(item);
